@@ -1,17 +1,13 @@
 import random
 
-def loto_sase_dinpatruzecisinoua():
-    sase_numere = set()
-    while len(sase_numere) < 6:
-        sase_numere.add(random.randint(1, 49))
-    loto = list(sase_numere)
-    return loto
-print(loto_sase_dinpatruzecisinoua())
+varianta = input('Cate numere vrei să afișez: \n')
+limita = input('Din câte vrei să fie: \n')
 
-def loto_cinci_dinpatruzeci():
-    cinci_numere = set()
-    while len(cinci_numere) < 5:
-        cinci_numere.add(random.randint(1, 40))
-    loto = list(cinci_numere)
+def loto(varianta, limita):
+    numere = set()
+    while len(numere) < int(varianta):
+        numere.add(random.randint(1, int(limita)))
+    loto = list(numere)
     return loto
-print(loto_cinci_dinpatruzeci())
+
+print(loto(varianta, limita))
